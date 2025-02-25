@@ -74,6 +74,11 @@ extension MovieViewController: UICollectionViewDelegateFlowLayout, UICollectionV
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let movieDetailViewController = MovieDetailViewController(movie: movies[indexPath.row])
+        navigationController?.pushViewController(movieDetailViewController, animated: true)
+    }
+    
     
 }
 
